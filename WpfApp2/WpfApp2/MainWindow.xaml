@@ -7,7 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Menu Height="70" Margin="0,0,675,0" VerticalAlignment="Top">
+            <MenuItem Header="File" Height="64" Width="115" Click="MenuItem_Click" RenderTransformOrigin="0.743,0.373">
+                <MenuItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.408"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.94"/>
+                    </TransformGroup>
+                </MenuItem.RenderTransform>
+                <MenuItem.Icon>
+                    <Image Source="C:\Users\aleynikov_a\Desktop\1.JFIF" Margin="0,0,-23,-22"/>
+                </MenuItem.Icon>
+                <MenuItem Header="Create"/>
+                <MenuItem Header="Open">
+                    <MenuItem Header="xd"/>
+                </MenuItem>
+                <MenuItem Header="Save"/>
+                <Button Content="Knopka v menu"/>
+                <Separator/>
+                <MenuItem Header="Leave"/>
+            </MenuItem>
+        </Menu>
         <Button Content="regards" FontSize="24" FontFamily="Times New Roman" HorizontalAlignment="Center"  Click="Button_Click" Margin="0,217,0,0" VerticalAlignment="Top" Height="65" Width="148"/>
-
+        <Image Name="ghj" HorizontalAlignment="Left" Height="100" Margin="342,75,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

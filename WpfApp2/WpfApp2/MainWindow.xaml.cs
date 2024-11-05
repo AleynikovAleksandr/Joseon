@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace WpfApp2
 {
@@ -20,9 +21,37 @@ namespace WpfApp2
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private List<string> images;
+        private int ind = 0;
         public MainWindow()
         {
             InitializeComponent();
+            LoadImages(@"C:\Users\aleynikov_a\Desktop\12");
+            Displaylmage();
+        }
+        private void LoadImages(string path)
+        {
+            if (Directory.Exists(path))
+            {
+                images = new List<string>(Directory.GetFiles(path, "*.jpg"));
+                images.AddRange(Directory.GetFiles(path , "*.png"));
+                images.AddRange(Directory.GetFiles(path, "*.webp"));
+            }
+        }
+
+
+        private void Displaylmage ()
+        {
+            if (images == null || images.Count == 0) 
+            {
+                MessageBox.Show("1");
+                return;
+            }
+            var ip = images[ind];
+            ghj.Source = new BitmapImage(new Uri(ip));
+
+
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -31,5 +60,10 @@ namespace WpfApp2
             this.Close();
         }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+
+        }
     }
 }

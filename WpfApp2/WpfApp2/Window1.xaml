@@ -8,7 +8,7 @@
         Title="Window1" Height="450" Width="800">
     <Grid>
         <Button Content="future" FontSize="20" FontFamily="Times New Roman" HorizontalAlignment="Center" Height="60" VerticalAlignment="Top" Width="142"  Click="BackButton_Click" Margin="0,332,0,0"/>
-        <Image Source="C:\Users\Alex\OneDrive\Рабочий стол\licensed-image.jpg" HorizontalAlignment="Center" Height="264" Margin="0,68,0,0" VerticalAlignment="Top" Width="424"/>
+        <Image Source="C:\Users\Alex\OneDrive\Рабочий стол\licensed-image.jpg" HorizontalAlignment="Center" Height="264" Margin="-22,45,390,0" VerticalAlignment="Top" Width="424"/>
 
 
     </Grid>
