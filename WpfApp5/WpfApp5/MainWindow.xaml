@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name ="txtDisplay" TextAlignment="Right" Grid.Row="0" Margin="10" IsReadOnly="True" FontSize="24" TextChanged="TxtDisplay_TextChanged"></TextBox>
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="btn7" Content="7" Grid.Row="1" Grid.Column="0" Click="NumberButton_Click"></Button>
+            <Button Name="btn8" Content="8" Grid.Row="1" Grid.Column="1" Click="NumberButton_Click"></Button>
+            <Button Name="btn9" Content="9" Grid.Row="1" Grid.Column="2" Click="NumberButton_Click"></Button>
+
+            <Button Name="btn4" Content="4" Grid.Row="2" Grid.Column="0" Click="NumberButton_Click"></Button>
+            <Button Name="btn5" Content="5" Grid.Row="2" Grid.Column="1" Click="NumberButton_Click"></Button>
+            <Button Name="btn6" Content="6" Grid.Row="2" Grid.Column="2" Click="NumberButton_Click"></Button>
+
+            <Button Name="btn1" Content="1" Grid.Row="3" Grid.Column="0" Click="NumberButton_Click"></Button>
+            <Button Name="btn2" Content="2" Grid.Row="3" Grid.Column="1" Click="NumberButton_Click"></Button>
+            <Button Name="btn3" Content="3" Grid.Row="3" Grid.Column="2" Click="NumberButton_Click"></Button>
+
+            <Button Name="btn0" Content="0" Grid.Row="4" Grid.Column="1" Click="NumberButton_Click" />
+            <Button Name="btnDecimal" Content="." Grid.Row="4" Grid.Column="2" Click="btnDecimal_Click" />
+            <Button Name="btnEquals" Content="=" Grid.Row="0" Grid.Column="3" Click="EqualsButton_Click" />
+            <Button Name="btnAdd" Content="+" Grid.Row="1" Grid.Column="4" Click="OperationButton_Click" />
+            <Button Name="btnRemove" Content="-" Grid.Row="2" Grid.Column="4" Click="OperationButton_Click" />
+            <Button Name="btnMulti" Content="*" Grid.Row="3" Grid.Column="4" Click="OperationButton_Click" />
+            <Button Name="btnDivide" Content="/" Grid.Row="4" Grid.Column="3" Click="OperationButton_Click" />
+            <Button Name="btnClear" Content="C" Grid.Row="4" Grid.Column="0" Click="ClearButton_Click" />
+
+
+        </Grid>
+    </Grid>
+
+
+</Window>
+
