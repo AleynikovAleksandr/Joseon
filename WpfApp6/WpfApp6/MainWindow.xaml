@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="586" Width="438">
+
+    <Grid>
+        <!-- Вопросы -->
+        <StackPanel Margin="20">
+            <!-- Вопрос 1 -->
+            <TextBlock Text="1. Какой язык программирования является основным для создания мобильных приложений на платформе Android?"  FontSize="12"
+                       TextWrapping="Wrap" Margin="0,10,0,10" FontWeight="Bold"/>
+            <RadioButton Name="Q1_1" GroupName="Q1" Content="Swift"/>
+            <RadioButton Name="Q1_2" GroupName="Q1" Content="Kotlin"/>
+            <RadioButton Name="Q1_3" GroupName="Q1" Content="JavaScript"/>
+            <RadioButton Name="Q1_4" GroupName="Q1" Content="Ruby"/>
+
+            <!-- Вопрос 2 -->
+            <TextBlock Text="2. Что такое OOП в контексте программирования?" FontSize="12"
+                       TextWrapping="Wrap" Margin="0,20,0,10" FontWeight="Bold"/>
+            <RadioButton Name="Q2_1" GroupName="Q2" Content="Объектно-ориентированное программирование"/>
+            <RadioButton Name="Q2_2" GroupName="Q2" Content="Операционная система программирования"/>
+            <RadioButton Name="Q2_3" GroupName="Q2" Content="Обработка объектов программирования"/>
+            <RadioButton Name="Q2_4" GroupName="Q2" Content="Оптимизация обработки информации"/>
+
+            <!-- Вопрос 3 -->
+            <TextBlock Text="3. Какой из следующих типов данных используется для представления целых чисел в языке C?" FontSize="12"
+                       TextWrapping="Wrap" Margin="0,20,0,10" FontWeight="Bold"/>
+            <RadioButton Name="Q3_1" GroupName="Q3" Content="float"/>
+            <RadioButton Name="Q3_2" GroupName="Q3" Content="char"/>
+            <RadioButton Name="Q3_3" GroupName="Q3" Content="int"/>
+            <RadioButton Name="Q3_4" GroupName="Q3" Content="double"/>
+
+            <!-- Вопрос 4 -->
+            <TextBlock Text="4. Что такое 'рекурсия' в программировании?" FontSize="12"
+                       TextWrapping="Wrap" Margin="0,20,0,10" FontWeight="Bold"/>
+            <RadioButton Name="Q4_1" GroupName="Q4" Content="Метод выполнения нескольких операций одновременно"/>
+            <RadioButton Name="Q4_2" GroupName="Q4" Content="Процесс, при котором функция вызывает саму себя"/>
+            <RadioButton Name="Q4_3" GroupName="Q4" Content="Понижение приоритетности операций"/>
+            <RadioButton Name="Q4_4" GroupName="Q4" Content="Программный цикл с заранее известным количеством итераций"/>
+        </StackPanel>
+
+        <!-- Кнопка проверки -->
+        <Button Name="CheckButton" Content="Проверить ответы" Width="200" Height="40" 
+                VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,496,0,0"
+                Click="CheckButton_Click"/>
+    </Grid>
+</Window>
