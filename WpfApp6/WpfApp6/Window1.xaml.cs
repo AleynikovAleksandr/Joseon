@@ -19,34 +19,40 @@ namespace WpfApp6
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1(int correctAnswers, string correctQuestions, string wrongQuestions)
+        public Window1(List<string> correctAnswers, List<string> wrongAnswers)
         {
             InitializeComponent();
 
-            
-            string resultMessage = $"{correctQuestions}\n{wrongQuestions}";
+            // Формируем результат
+            string resultMessage = "Результаты теста:\n\n";
+            resultMessage += $"Правильные ответы: {(correctAnswers.Count > 0 ? string.Join(", ", correctAnswers) : "0")}\n";
+            resultMessage += $"Неправильные ответы: {(wrongAnswers.Count > 0 ? string.Join(", ", wrongAnswers) : "0")}\n";
+
+            // Общая оценка
+            if (correctAnswers.Count == 8)
+            {
+                resultMessage += "\n Отлично!";
+            }
+            else if (correctAnswers.Count == 7 || correctAnswers.Count == 6)
+            {
+                resultMessage += "\n Хорошо!";
+            }
+            else if (correctAnswers.Count == 5 || correctAnswers.Count == 4)
+            {
+                resultMessage += "\n Неплохо!";
+            }
+            else
+            {
+                resultMessage += "\n Плохо!";
+            }
 
 
-            if (correctAnswers == 4)
-            {
-                resultMessage += "\nХорошо!";
-            }
-            else if (correctAnswers == 2 || correctAnswers == 3)
-            {
-                resultMessage += "\nНеплохо!";
-            }
-            else if (correctAnswers == 0 || correctAnswers == 1)
-            {
-                resultMessage += "\nПлохо!";
-            }
-
-            ResultText.Text = resultMessage;
+            ResultsTextBlock.Text = resultMessage;
         }
 
-        
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.Close();
         }
     }
 }

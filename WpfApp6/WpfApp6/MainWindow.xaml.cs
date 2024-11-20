@@ -20,6 +20,10 @@ namespace WpfApp6
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool isFirstPartCompleted = false; // Следит за этапами теста
+        private List<string> correctAnswers = new List<string>();
+        private List<string> wrongAnswers = new List<string>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,98 +31,91 @@ namespace WpfApp6
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
         {
-            int correctAnswers = 0;
-            string wrongQuestions = "";
-            string correctQuestions = "";
-
-            if (Q1_2.IsChecked == true)
+            if (!isFirstPartCompleted)
             {
-                correctAnswers++;
-                correctQuestions += "Правильный: Вопрос 1\n";
+                // Проверка ответов для вопросов 1–4
+                CheckFirstPart();
+                FirstQuestionGroup.Visibility = Visibility.Collapsed;
+                SecondQuestionGroup.Visibility = Visibility.Visible;
+                CheckButton.Content = "Завершить тест";
+                isFirstPartCompleted = true;
             }
             else
             {
-                wrongQuestions += "Неправильный: Вопрос 1\n";
+                // Проверка ответов для вопросов 5–8 и вывод результатов
+                CheckSecondPart();
+                ShowResults();
             }
+        }
 
-            if (Q2_1.IsChecked == true)
+        private void CheckFirstPart()
+        {
+            // Проверяем ответы для вопросов 1–4
+            if (Question1Option2.IsChecked == true) correctAnswers.Add("1");
+            else wrongAnswers.Add("1");
+
+            if (Question2Option1.IsChecked == true) correctAnswers.Add("2");
+            else wrongAnswers.Add("2");
+
+            if (Question3Option3.IsChecked == true) correctAnswers.Add("3");
+            else wrongAnswers.Add("3");
+
+            if (Question4Option2.IsChecked == true) correctAnswers.Add("4");
+            else wrongAnswers.Add("4");
+        }
+
+        private void CheckSecondPart()
+        {
+            // Проверяем ответы для вопросов 5–8
+            if (Question5Option1.IsChecked == true && Question5Option4.IsChecked == true &&
+                !(Question5Option2.IsChecked == true || Question5Option3.IsChecked == true))
             {
-                correctAnswers++;
-                correctQuestions += "Правильный: Вопрос 2\n";
+                correctAnswers.Add("5");
             }
             else
             {
-                wrongQuestions += "Неправильный: Вопрос 2\n";
+                wrongAnswers.Add("5");
             }
 
-            if (Q3_3.IsChecked == true)
+            if (Question6Option2.IsChecked == true && Question6Option4.IsChecked == true &&
+                !(Question6Option1.IsChecked == true || Question6Option3.IsChecked == true))
             {
-                correctAnswers++;
-                correctQuestions += "Правильный: Вопрос 3\n";
+                correctAnswers.Add("6");
             }
             else
             {
-                wrongQuestions += "Неправильный: Вопрос 3\n";
+                wrongAnswers.Add("6");
             }
 
-            if (Q4_2.IsChecked == true)
+            if (Question7Option2.IsChecked == true && Question7Option3.IsChecked == true &&
+                !(Question7Option1.IsChecked == true || Question7Option4.IsChecked == true))
             {
-                correctAnswers++;
-                correctQuestions += "Правильный: Вопрос 4\n";
+                correctAnswers.Add("7");
             }
             else
             {
-                wrongQuestions += "Неправильный: Вопрос 4\n";
+                wrongAnswers.Add("7");
             }
 
-            
-            if (string.IsNullOrEmpty(wrongQuestions)) wrongQuestions = "Неправильных ответов: 0\n";
+            if (Question8Option1.IsChecked == true && Question8Option3.IsChecked == true &&
+                !(Question8Option2.IsChecked == true || Question8Option4.IsChecked == true))
+            {
+                correctAnswers.Add("8");
+            }
+            else
+            {
+                wrongAnswers.Add("8");
+            }
+        }
 
-            
-            if (string.IsNullOrEmpty(correctQuestions)) correctQuestions = "Правильных ответов: 0\n";
-
-            
-            Window1 resultWindow = new Window1(correctAnswers, correctQuestions, wrongQuestions);
-            resultWindow.Show();
-
-            
+        private void ShowResults()
+        {
+            // Открываем новое окно с результатами
+            Window1 resultsWindow = new Window1(correctAnswers, wrongAnswers);
+            resultsWindow.Show();
             this.Close();
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
      

@@ -7,13 +7,7 @@
         mc:Ignorable="d"
         Title="Window1" Height="586" Width="438">
     <Grid>
-        <StackPanel>
-
-            <TextBlock Name="ResultText" Margin="10"  HorizontalAlignment="Center"  VerticalAlignment="Center" TextWrapping="Wrap" FontSize="16"/>
-            <Button x:Name="ExitButton" Content="Выйти" Click="ExitButton_Click" Width="88"/>
-
-            
-        </StackPanel>
-
+        <TextBlock Name="ResultsTextBlock" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="16" TextWrapping="Wrap" Height="301" Width="290" Margin="0,63,0,0" />
+        <Button Content="Выход" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,422,0,0" Click="ExitButton_Click" Height="33" Width="102" />
     </Grid>
 </Window>

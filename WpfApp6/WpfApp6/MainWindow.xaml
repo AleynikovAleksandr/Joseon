@@ -5,47 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="586" Width="438">
+        Title="MainWindow" Height="586" Width="450">
 
     <Grid>
-        <!-- Вопросы -->
-        <StackPanel Margin="20">
-            <!-- Вопрос 1 -->
-            <TextBlock Text="1. Какой язык программирования является основным для создания мобильных приложений на платформе Android?"  FontSize="12"
-                       TextWrapping="Wrap" Margin="0,10,0,10" FontWeight="Bold"/>
-            <RadioButton Name="Q1_1" GroupName="Q1" Content="Swift"/>
-            <RadioButton Name="Q1_2" GroupName="Q1" Content="Kotlin"/>
-            <RadioButton Name="Q1_3" GroupName="Q1" Content="JavaScript"/>
-            <RadioButton Name="Q1_4" GroupName="Q1" Content="Ruby"/>
+        <!-- Группа вопросов 1–4 -->
+        <StackPanel Name="FirstQuestionGroup" Visibility="Visible" Margin="20">
+            <TextBlock Text="Вопрос 1: Какой язык программирования является основным для создания мобильных приложений на платформе Android?"  TextWrapping="Wrap" Margin="0,10" />
+            <RadioButton Name="Question1Option1" Content="Swift" GroupName="Question1" />
+            <RadioButton Name="Question1Option2" Content="Kotlin" GroupName="Question1" />
+            <RadioButton Name="Question1Option3" Content="JavaScript" GroupName="Question1" />
+            <RadioButton Name="Question1Option4" Content="Ruby" GroupName="Question1" />
 
-            <!-- Вопрос 2 -->
-            <TextBlock Text="2. Что такое OOП в контексте программирования?" FontSize="12"
-                       TextWrapping="Wrap" Margin="0,20,0,10" FontWeight="Bold"/>
-            <RadioButton Name="Q2_1" GroupName="Q2" Content="Объектно-ориентированное программирование"/>
-            <RadioButton Name="Q2_2" GroupName="Q2" Content="Операционная система программирования"/>
-            <RadioButton Name="Q2_3" GroupName="Q2" Content="Обработка объектов программирования"/>
-            <RadioButton Name="Q2_4" GroupName="Q2" Content="Оптимизация обработки информации"/>
+            <TextBlock Text="Вопрос 2: Что такое ООП в контексте программирования?"  Margin="0,20" />
+            <RadioButton Name="Question2Option1" Content="Объектно-ориентированное программирование" GroupName="Question2" />
+            <RadioButton Name="Question2Option2" Content="Операционная система программирования" GroupName="Question2" />
+            <RadioButton Name="Question2Option3" Content="Обработка объектов программирования" GroupName="Question2" />
+            <RadioButton Name="Question2Option4" Content="Оптимизация обработки информации" GroupName="Question2" />
 
-            <!-- Вопрос 3 -->
-            <TextBlock Text="3. Какой из следующих типов данных используется для представления целых чисел в языке C?" FontSize="12"
-                       TextWrapping="Wrap" Margin="0,20,0,10" FontWeight="Bold"/>
-            <RadioButton Name="Q3_1" GroupName="Q3" Content="float"/>
-            <RadioButton Name="Q3_2" GroupName="Q3" Content="char"/>
-            <RadioButton Name="Q3_3" GroupName="Q3" Content="int"/>
-            <RadioButton Name="Q3_4" GroupName="Q3" Content="double"/>
+            <TextBlock Text="Вопрос 3: Какой из следующих типов данных используется для представления целых чисел в языке C?"  TextWrapping="Wrap"  Margin="0,20" />
+            <RadioButton Name="Question3Option1" Content="float" GroupName="Question3" />
+            <RadioButton Name="Question3Option2" Content="char" GroupName="Question3" />
+            <RadioButton Name="Question3Option3" Content="int" GroupName="Question3" />
+            <RadioButton Name="Question3Option4" Content="double" GroupName="Question3" />
 
-            <!-- Вопрос 4 -->
-            <TextBlock Text="4. Что такое 'рекурсия' в программировании?" FontSize="12"
-                       TextWrapping="Wrap" Margin="0,20,0,10" FontWeight="Bold"/>
-            <RadioButton Name="Q4_1" GroupName="Q4" Content="Метод выполнения нескольких операций одновременно"/>
-            <RadioButton Name="Q4_2" GroupName="Q4" Content="Процесс, при котором функция вызывает саму себя"/>
-            <RadioButton Name="Q4_3" GroupName="Q4" Content="Понижение приоритетности операций"/>
-            <RadioButton Name="Q4_4" GroupName="Q4" Content="Программный цикл с заранее известным количеством итераций"/>
+            <TextBlock Text="Вопрос 4: Что такое 'рекурсия' в программировании?"  Margin="0,20" />
+            <RadioButton Name="Question4Option1" Content="Метод выполнения нескольких операций одновременно" GroupName="Question4" />
+            <RadioButton Name="Question4Option2" Content="Процесс, при котором функция вызывает саму себя" GroupName="Question4" />
+            <RadioButton Name="Question4Option3" Content="Понижение приоритетности операций" GroupName="Question4" />
+            <RadioButton Name="Question4Option4" Content="Программный цикл с заранее известным количеством итераций" GroupName="Question4" />
         </StackPanel>
 
-        <!-- Кнопка проверки -->
-        <Button Name="CheckButton" Content="Проверить ответы" Width="200" Height="40" 
-                VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,496,0,0"
-                Click="CheckButton_Click"/>
+        <!-- Группа вопросов 5–8 -->
+        <StackPanel Name="SecondQuestionGroup" Visibility="Collapsed" Margin="20">
+            <TextBlock Text="Вопрос 5: Какой из перечисленных языков программирования является объектно-ориентированным?"  TextWrapping="Wrap"  Margin="0,10" />
+            <CheckBox Name="Question5Option1" Content="Python" />
+            <CheckBox Name="Question5Option2" Content="C" />
+            <CheckBox Name="Question5Option3" Content="HTML" />
+            <CheckBox Name="Question5Option4" Content="Java" />
+
+            <TextBlock Text="Вопрос 6: Какие из следующих структур данных относятся к линейным?"  TextWrapping="Wrap"  Margin="0,20" />
+            <CheckBox Name="Question6Option1" Content="Граф" />
+            <CheckBox Name="Question6Option2" Content="Список" />
+            <CheckBox Name="Question6Option3" Content="Дерево" />
+            <CheckBox Name="Question6Option4" Content="Стек" />
+
+            <TextBlock Text="Вопрос 7: Какие из приведённых алгоритмов относятся к сортировке?"  TextWrapping="Wrap"  Margin="0,20" />
+            <CheckBox Name="Question7Option1" Content="Алгоритм поиска в глубину" />
+            <CheckBox Name="Question7Option2" Content="Сортировка слиянием (Merge Sort)" />
+            <CheckBox Name="Question7Option3" Content="Быстрая сортировка (Quick Sort)" />
+            <CheckBox Name="Question7Option4" Content="Алгоритм Дейкстры" />
+
+            <TextBlock Text="Вопрос 8: Какие принципы относятся к основам ООП ?"   TextWrapping="Wrap"  Margin="0,20" />
+            <CheckBox Name="Question8Option1" Content="Наследование" />
+            <CheckBox Name="Question8Option2" Content="Инкапсуляция" />
+            <CheckBox Name="Question8Option3" Content="Полиморфизм" />
+            <CheckBox Name="Question8Option4" Content="Рекурсия" />
+        </StackPanel>
+
+        <Button Name="CheckButton" Content="Далее" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,503,0,0" Click="CheckButton_Click" Width="88" Height="26" />
     </Grid>
 </Window>
