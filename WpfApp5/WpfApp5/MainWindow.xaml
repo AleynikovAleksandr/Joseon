@@ -40,18 +40,59 @@
             <Button Name="btn3" Content="3" Grid.Row="3" Grid.Column="2" Click="NumberButton_Click"></Button>
 
             <Button Name="btn0" Content="0" Grid.Row="4" Grid.Column="1" Click="NumberButton_Click" />
+            
             <Button Name="btnDecimal" Content="." Grid.Row="4" Grid.Column="2" Click="btnDecimal_Click" />
-            <Button Name="btnEquals" Content="=" Grid.Row="0" Grid.Column="3" Click="EqualsButton_Click" />
-            <Button Name="btnAdd" Content="+" Grid.Row="1" Grid.Column="4" Click="OperationButton_Click" />
-            <Button Name="btnRemove" Content="-" Grid.Row="2" Grid.Column="4" Click="OperationButton_Click" />
-            <Button Name="btnMulti" Content="*" Grid.Row="3" Grid.Column="4" Click="OperationButton_Click" />
-            <Button Name="btnDivide" Content="/" Grid.Row="4" Grid.Column="3" Click="OperationButton_Click" />
+            
+            <Button Name="btnEquals" Content="=" Grid.Row="0" Grid.Column="3" Click="EqualsButton_Click" >
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Равно: вычисляет результат операции."/>
+                        <Image Source="C:\Users\Alex\OneDrive\Рабочий стол\12\equals.png" Width="100" Height="100"/>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="btnAdd" Content="+" Grid.Row="1" Grid.Column="3" Click="OperationButton_Click">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Сложение: складывает два числа."/>
+                            <Image Source="C:\Users\Alex\OneDrive\Рабочий стол\12\addition.jpg" Width="100" Height="100"/>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="btnRemove" Content="-" Grid.Row="2" Grid.Column="4" Click="OperationButton_Click" >
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Вычитание: вычитает второе число из первого."/>
+                        <Image Source="C:\Users\Alex\OneDrive\Рабочий стол\12\minus.png" Width="100" Height="100"/>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="btnMulti" Content="*" Grid.Row="3" Grid.Column="4" Click="OperationButton_Click" >
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Умножение: перемножает два числа."/>
+                        <Image Source="C:\Users\Alex\OneDrive\Рабочий стол\12\multiplication.png" Width="100" Height="100"/>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            <Button Name="btnDivide" Content="/" Grid.Row="4" Grid.Column="3" Click="OperationButton_Click" >
+                <Button.ToolTip>
+                    <StackPanel>
+                        <TextBlock Text="Деление: делит первое число на второе."/>
+                        <Image Source="C:\Users\Alex\OneDrive\Рабочий стол\12\divide.png" Width="100" Height="100"/>
+                    </StackPanel>
+                </Button.ToolTip>
+            </Button>
+            
             <Button Name="btnClear" Content="C" Grid.Row="4" Grid.Column="0" Click="ClearButton_Click" />
-
-
+        
+        
         </Grid>
+    
     </Grid>
 
-
+    
 </Window>
 

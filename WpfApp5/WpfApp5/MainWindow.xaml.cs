@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,9 @@ namespace WpfApp5
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
+        
         private double _currentval = 0;
         private double _storedval = 0;
         private string _operation = "+";
@@ -64,7 +66,7 @@ namespace WpfApp5
                 case "/":
                     if(_currentval == 0)
                     {
-                        MessageBox.Show("0");
+                        MessageBox.Show("ERROR DIV BY ZERO");
                         break;
 
                     }
@@ -148,7 +150,7 @@ namespace WpfApp5
 
         private void btnDecimal_Click(object sender, RoutedEventArgs e)
         {
-
+          
         }
 
         private void btnEquals_Click(object sender, RoutedEventArgs e)

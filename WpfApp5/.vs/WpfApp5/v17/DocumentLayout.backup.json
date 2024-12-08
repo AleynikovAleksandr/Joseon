@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{2A22EA64-3ED2-40A8-A03D-4FC85DB0CCF4}|WpfApp5\\WpfApp5.csproj|c:\\users\\alex\\source\\repos\\joseon\\wpfapp5\\wpfapp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2A22EA64-3ED2-40A8-A03D-4FC85DB0CCF4}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A22EA64-3ED2-40A8-A03D-4FC85DB0CCF4}|WpfApp5\\WpfApp5.csproj|C:\\Users\\Alex\\source\\repos\\Joseon\\WpfApp5\\wpfapp5\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A22EA64-3ED2-40A8-A03D-4FC85DB0CCF4}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -23,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\source\\repos\\Joseon\\WpfApp5\\WpfApp5\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp5\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Alex\\source\\repos\\Joseon\\WpfApp5\\WpfApp5\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp5\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAswKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T03:03:37.06Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
