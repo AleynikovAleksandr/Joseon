@@ -1,0 +1,44 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alex\\source\\repos\\Joseon\\WpfApp5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A22EA64-3ED2-40A8-A03D-4FC85DB0CCF4}|WpfApp5\\WpfApp5.csproj|c:\\users\\alex\\source\\repos\\joseon\\wpfapp5\\wpfapp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2A22EA64-3ED2-40A8-A03D-4FC85DB0CCF4}|WpfApp5\\WpfApp5.csproj|solutionrelative:wpfapp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Alex\\source\\repos\\Joseon\\WpfApp5\\WpfApp5\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp5\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Alex\\source\\repos\\Joseon\\WpfApp5\\WpfApp5\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp5\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-08T03:02:35.621Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
